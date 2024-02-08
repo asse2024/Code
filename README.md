@@ -4,7 +4,7 @@
      * The ability of independent online systems to communicate with one 
        another and share transaction data to the customer
        
-     * this sample project is used notify yaya platform to the partner on the charge of the transaction  
+     * this sample project is used notify (emailing service) of yaya platform to the partner on the charge of the transaction  
        
      * This provides a way for one system (the source) to "speak" (HTTP request) to customer url (the destination) when an event occurs, and share information (request payload) about 
        the event that occurred.
