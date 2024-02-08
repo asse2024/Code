@@ -11,7 +11,7 @@
     
      * this project is  to notify customer for the transaction to be perform
   
-     * It created with python programming language 
+     * It created with python programming languagege and import flask and requests
      
    
      * The project is two python class server and webhook it notify the transaction detail to the partner from the server 
