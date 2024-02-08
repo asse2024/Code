@@ -2,7 +2,9 @@
 **#Partner Nofication Project#**
 
      * The ability of independent online systems to communicate with one 
-       another and share transaction data to the customer *
+       another and share transaction data to the customer
+       
+     * this sample project is used notify yaya platform to the partner on the charge of the transaction  
        
      * This provides a way for one system (the source) to "speak" (HTTP request) to customer url (the destination) when an event occurs, and share information (request payload) about 
        the event that occurred.
@@ -10,6 +12,7 @@
      * this project is  to notify customer for the transaction to be perform
   
      * It created with python programming language 
+     
    
      * The project is two python class server and webhook it notify the transaction detail to the partner from the server 
      
