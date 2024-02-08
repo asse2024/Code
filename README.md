@@ -17,7 +17,7 @@
        
 ****Requests****
 
-     A webhook is an HTTP request, triggered by an event in a payement notfication system and sent to a destination system URL 
+     this project is used webhook is an HTTP and HTTPS request, triggered by an event in a payement notfication system and sent to a destination system URL 
     
 ****JSON****
 
