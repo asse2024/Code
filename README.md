@@ -1,16 +1,19 @@
 
 **#Partner Nofication Project#**
 
-    * The ability of independent online systems to communicate with one 
+     * The ability of independent online systems to communicate with one 
        another and share transaction data to the customer *
+       
+     * This provides a way for one system (the source) to "speak" (HTTP request) to customer url (the destination) when an event occurs, and share information (request payload) about 
+       the event that occurred.
     
-     *this project is  to notify customer for the transaction to be perform
+     * this project is  to notify customer for the transaction to be perform
   
-     *It created with python programming language 
+     * It created with python programming language 
    
-     *The project is two python class server and webhook it notify the transaction detail to the partner from the server 
+     * The project is two python class server and webhook it notify the transaction detail to the partner from the server 
      
-     *it tested to local machine (127.0.0.1:5000\webhook) and to the https:\\webhook.site with json format.
+     * it tested to local machine (127.0.0.1:5000\webhook) and to the https:\\webhook.site with json format.
        
 ****Requests****
 
