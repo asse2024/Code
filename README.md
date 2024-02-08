@@ -1,5 +1,9 @@
-# this project is for notify yaya wallet partner when a transaction is performed to the customer #
-# it created with python programming language #
+
+
+# this project is describe to notify customer for the transaction to be perform #
+It created with python programming language 
+The project is two python class server and webhook it notify the transaction detail to the partner from the server 
+
 
 
 
