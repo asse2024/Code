@@ -1,8 +1,14 @@
 
 **#Partner Nofication Project#**
-this project is describe to notify customer for the transaction to be perform
-It created with python programming language 
-The project is two python class server and webhook it notify the transaction detail to the partner from the server 
+//this project is describe to notify customer for the transaction to be perform
+//It created with python programming language 
+//The project is two python class server and webhook it notify the transaction detail to the partner from the server 
+//it created with python programming language
+//it tested to local machine and to the https:\\webhook.site with json format.
+//it use JSON and REQUESTS
+** //Requests **
+A webhook is an HTTP request, triggered by an event in a payement notfication system and sent to a destination system URL 
+
 
 
 
