@@ -16,7 +16,7 @@
    
      * The project is two python class server and webhook it notify the transaction detail to the partner from the server 
      
-     * it tested to local machine (127.0.0.1:5000\webhook) and to the https:\\webhook.site with json format.
+     * it tested to local machine (http:\\127.0.0.1:5000\webhook) and to the https:\\webhook.site with json format.
        
 ****Requests****
 
