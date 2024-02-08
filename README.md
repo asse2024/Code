@@ -1,5 +1,6 @@
-# this project is for notify yaya wallet partner when a transaction is performed to the customer #
+this project is for notify yaya wallet partner when a transaction is performed to the customer #
 # it created with python programming language #
+
 
 
 *************
