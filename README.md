@@ -1,5 +1,5 @@
 
-**#Partner Nofication Project#**
+***Partner Nofication Project***
 
      * The ability of independent online systems to communicate with one 
        another and share transaction data to the customer
