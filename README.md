@@ -19,6 +19,8 @@
 **** JSON ****
   for sending content type file format 
 
+***Post Method***
+
 
 
 *************
