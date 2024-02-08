@@ -1,8 +1,10 @@
 # Code
+#  Server Send This data amount history to the partner it is done with python i test with local pc #
+
 
 import requests
 import json
-webhook_url = "https://github.com/asse2024/Code"
+webhook_url = "https://127.0.0.1/5000/webhook"
 data = {'id': '1dd2854e-3a79-4548-ae36-97e4a18ebf81',
   'amount': 100,
   'currency': 'ETB',
@@ -13,3 +15,6 @@ data = {'id': '1dd2854e-3a79-4548-ae36-97e4a18ebf81',
   'account_name': 'abebekebede1',
   'invoice_url': 'https://yayawallet.com/en/invoice/xxxx'}
 r = requests.post(webhook_url, data=json.dumps(data), headers={'Content-Type':'application/json'})
+
+
+
