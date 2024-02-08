@@ -94,9 +94,10 @@
     r = requests.post(webhook_url, data=json.dumps(data), headers={'Content-Type':'application/json'})
 
      **********Result********
-   WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
- * Running on http://127.0.0.1:5000
-Press CTRL+C to quit
-{'id': '1dd2854e-3a79-4548-ae36-97e4a18ebf81', 'amount': 100, 'currency': 'ETB', 'created_at_time': 1673381836, 'timestamp': 1701272333, 'cause': 'Testing', 'full_name':{'id': '1dd2854e-3a79-4548-ae36-97e4a18ebf81', 'amount': 100, 'currency': 'ETB', 'created_at_time': 1673381836, 'timestamp': 1701272333, 'cause': 'Testing', 'full_name':
- 'Abebe Kebede', 'account_name': 'abebekebede1', 'invoice_url': 'https://yayawallet.com/en/invoice/xxxx'}
+      WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+      * Running on http://127.0.0.1:5000
+      Press CTRL+C to quit
+      {'id': '1dd2854e-3a79-4548-ae36-97e4a18ebf81', 'amount': 100, 'currency': 'ETB', 'created_at_time': 1673381836, 'timestamp': 1701272333, 'cause': 'Testing', 'full_name':{'id': 
+      '1dd2854e-3a79-4548-ae36-97e4a18ebf81', 'amount': 100, 'currency': 'ETB', 'created_at_time': 1673381836, 'timestamp': 1701272333, 'cause': 'Testing', 'full_name':
+      'Abebe Kebede', 'account_name': 'abebekebede1', 'invoice_url': 'https://yayawallet.com/en/invoice/xxxx'}
 127.0.0.1 - - [08/Feb/2024 15:03:55] "POST /webhook HTTP/1.1" 200 -
