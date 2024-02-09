@@ -82,7 +82,7 @@
 
     import requests
     import json
-    webhook_url = 'http://172.0.0.1:5000/webhook'
+    webhook_url = 'http://127.0.0.1:5000/webhook'
     data = {'id': '1dd2854e-3a79-4548-ae36-97e4a18ebf81',
            'amount': 100,
            'currency': 'ETB',
