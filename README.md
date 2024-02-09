@@ -105,9 +105,6 @@
 
 ****Validation for the webhook****
 
-
-Validation for the webhook
-
            from http.server import BaseHTTPRequestHandler, HTTPServer
            import square
            from square.utilities.webhooks_helper import is_valid_webhook_event_signature
