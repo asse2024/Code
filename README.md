@@ -104,11 +104,9 @@
       127.0.0.1 - - [08/Feb/2024 15:03:55] "POST /webhook HTTP/1.1" 200 -
 
 ****Validation for the webhook****
-****Plivo Signature****
 
-      the request that will create for webhook that can manage the http by authentication 
-      of the customer to heck the tansaction and to 
-      give permission
+
+Validation for the webhook
 
            from http.server import BaseHTTPRequestHandler, HTTPServer
            import square
