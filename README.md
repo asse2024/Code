@@ -136,12 +136,12 @@
 
             self.end_headers()
 
-        # Start a simple server for local testing.
-        # Different frameworks may provide the raw request body in other ways.
+      testing method 
+       
         # INSTRUCTIONS
         # 1. Run the server:
         # python server.py
-        # 2. Send the following request from a separate terminal:
+        # 2. Send the following request from a separate terminal include the transaction:
         #    curl -vX POST localhost:8000 -d  -H "X-Square-HmacSha256-Signature: 2kRE5qRU2tR+tBGlDwMEw2avJ7QM4ikPYD/PJ3bd9Og="
         server = HTTPServer(("127.0.0.1", 5000), MainHandler)
         server.serve_forever()
