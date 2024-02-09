@@ -149,13 +149,13 @@
     ***Validation of the signature***
 
     import hmac
-from flask import Flask, request
+    from flask import Flask, request
 
-app = Flask(__name__)
+    app = Flask(__name__)
 
 
-@app.route('/receive-seatable-webhook', methods=['POST'])
-def receive():
+    @app.route('/receive-seatable-webhook', methods=['POST'])
+    def receive():
 
     secret = 'secret'
     seatable_signature = request.headers.get('X-Seatable-Signature', '').replace('sha256=', '')
