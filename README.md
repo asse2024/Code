@@ -141,7 +141,7 @@
        
             speak_params = {"loop": "3"}
        
-            xml.add(plivoxml.SpeakElement("Hello, from Plivo", **speak_params))
+            xml.add(plivoxml.SpeakElement("Hello, from Yaya", **speak_params))
             response = make_response(xml.to_string())
             response.headers["Content-type"] = "text/xml"
             print("Send XML to Plivo server")
