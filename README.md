@@ -104,6 +104,11 @@
       127.0.0.1 - - [08/Feb/2024 15:03:55] "POST /webhook HTTP/1.1" 200 -
 
 ****Signature Create for secured the webhook****
+****Plivo Signature****
+
+      the request that will create for webhook that can manage the http by authentication 
+      of the customer to heck the tansaction and to 
+      give permission
 
       from flask import Flask, request, make_response
       import plivo
@@ -161,4 +166,5 @@
           * Restarting with stat
           * Debugger is active!
           * PIN: 641-183-354
+          
 
