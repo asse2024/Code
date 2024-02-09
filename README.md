@@ -110,61 +110,44 @@
       of the customer to heck the tansaction and to 
       give permission
 
-      from flask import Flask, request, make_response
-      import plivo
-      from plivo import plivoxml
+   from http.server import BaseHTTPRequestHandler, HTTPServer
+import square
+from square.utilities.webhooks_helper import is_valid_webhook_event_signature
 
-      app = Flask(__name__)
+# The URL where event notifications are sent.
+NOTIFICATION_URL = 'https://yayawallet.com/webhook'
 
-      @app.route("/speak/", methods=["GET", "POST"])
-      def validate_signature():
-        auth_token = "<auth_token>"
-        signature = request.headers.get("X-Plivo-Signature-V3")
-        nonce = request.headers.get("X-Plivo-Signature-V3-Nonce")
-        webhook_url = request.url
-        http_method = request.method
+# The signature key defined for the subscription.
+SIGNATURE_KEY = 'asdf1234'
 
-       if http_method == "GET":
-           valid_signature = plivo.utils.validate_v3_signature(
-              http_method, webhook_url, nonce, auth_token, signature
-           )
-       elif http_method == "POST":
-         params = request.form.to_dict()
-         valid_signature = plivo.utils.validate_v3_signature(
-             http_method, webhook_url, nonce, auth_token, signature, params
-         )
-      else:
-          return "Method not allowed", 405
+class MainHandler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        length = int(self.headers.get('content-length', 0))
+        body = self.rfile.read(length).decode('utf-8')
+        square_signature = self.headers.get('x-square-hmacsha256-signature')
 
-      print(f"Your webhook authentication is {valid_signature}")
+        is_from_square = is_valid_webhook_event_signature(body,
+                                                          square_signature,
+                                                          SIGNATURE_KEY,
+                                                          NOTIFICATION_URL)
 
-     # Return an XML answer to Plivo if the signature is valid
+        if is_from_square:
+            # Signature is valid. Return 200 OK.
+            self.send_response(200)
+            print("Request body: {}".format(body))
+        else:
+            # Signature is invalid. Return 403 Forbidden.
+            self.send_response(403)
 
-            if valid_signature == True:
-       
-            xml = plivoxml.ResponseElement()
-       
-            speak_params = {"loop": "3"}
-       
-            xml.add(plivoxml.SpeakElement("Hello, from Yaya", **speak_params))
-            response = make_response(xml.to_string())
-            response.headers["Content-type"] = "text/xml"
-            print("Send XML to Plivo server")
-            print(xml.to_string())
-            return response, 200
-       else:
-            return "Bad request", 400
+        self.end_headers()
 
-
-       if __name__ == "__main__":
-       app.run(host="127.0.0.1", debug=True)
-
-***Result***
-
-          * Running on http://127.0.0.1:5000
-          Press CTRL+C to quit
-          * Restarting with stat
-          * Debugger is active!
-          * PIN: 641-183-354
-          
+        # Start a simple server for local testing.
+        # Different frameworks may provide the raw request body in other ways.
+        # INSTRUCTIONS
+        # 1. Run the server:
+        # python server.py
+        # 2. Send the following request from a separate terminal:
+        #    curl -vX POST localhost:8000 -d  -H "X-Square-HmacSha256-Signature: 2kRE5qRU2tR+tBGlDwMEw2avJ7QM4ikPYD/PJ3bd9Og="
+        server = HTTPServer(("127.0.0.1", 5000), MainHandler)
+        server.serve_forever()
 
