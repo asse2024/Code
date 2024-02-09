@@ -103,7 +103,7 @@
       'Abebe Kebede', 'account_name': 'abebekebede1', 'invoice_url': 'https://yayawallet.com/en/invoice/xxxx'}
       127.0.0.1 - - [08/Feb/2024 15:03:55] "POST /webhook HTTP/1.1" 200 -
 
-****Signature Create for secured the webhook****
+****Validation for the webhook****
 ****Plivo Signature****
 
       the request that will create for webhook that can manage the http by authentication 
